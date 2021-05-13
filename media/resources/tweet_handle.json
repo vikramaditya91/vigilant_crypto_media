@@ -1,0 +1,1107 @@
+{
+  "AGI": [
+    "singularity_net",
+    "bengoertzel"
+  ],
+  "MTH": [
+    "monetha_io"
+  ],
+  "DLT": [
+    "get_delta",
+    "agrelloapp"
+  ],
+  "TNT": [
+    "tierion"
+  ],
+  "NAV": [
+    "navcoin",
+    "proletesseract"
+  ],
+  "QLC": [
+    "qlcchain",
+    "qlinkmobi"
+  ],
+  "GTO": [
+    "gifto_io",
+    "andytian"
+  ],
+  "WBTC": [
+    "bittrexglobal",
+    "wrappedbtc"
+  ],
+  "QTUM": [
+    "qtum",
+    "patrickxdai"
+  ],
+  "LTO": [
+    "ltonetwork",
+    "ltonews"
+  ],
+  "BCN": [
+    "bytecoin_bcn",
+    "bytecoin_dev"
+  ],
+  "BAND": [
+    "swipewallet",
+    "coin"
+  ],
+  "RCN": [
+    "officialmcafee",
+    "rcnfinance"
+  ],
+  "ZEC": [
+    "electriccoinco",
+    "zooko"
+  ],
+  "STRAT": [
+    "stratisplatform",
+    "khil0ne"
+  ],
+  "NPXS": [
+    "pundixlabs",
+    "pundix_br"
+  ],
+  "RVN": [
+    "ravencoin",
+    "tronblack"
+  ],
+  "DCR": [
+    "decredproject",
+    "jz_bz"
+  ],
+  "MDA": [
+    "moedaseeds",
+    "chainshuttle"
+  ],
+  "SALT": [
+    "saltlending"
+  ],
+  "DGD": [
+    "bittrexglobal",
+    "digixglobal"
+  ],
+  "BCD": [
+    "bitcoindiamond_",
+    "bcd_community"
+  ],
+  "CHAT": [
+    "e_chat_ico",
+    "thecoinchat"
+  ],
+  "BNBDOWN": [
+    "binance"
+  ],
+  "XMR": [
+    "monero",
+    "electriccoinco"
+  ],
+  "STORM": [
+    "storm_token",
+    "stormxio"
+  ],
+  "ANT": [
+    "aragonproject",
+    "licuende"
+  ],
+  "POA": [
+    "poanetwork",
+    "xdaichain"
+  ],
+  "ONT": [
+    "ontologynetwork",
+    "ontology_news"
+  ],
+  "KEY": [
+    "selfkey"
+  ],
+  "HC": [
+    "hcashofficial",
+    "ahcash"
+  ],
+  "BNT": [
+    "bancor",
+    "galiabenartzi"
+  ],
+  "EDO": "eidoo_io",
+  "CHZ": [
+    "chiliz",
+    "alex_dreyfus"
+  ],
+  "THETA": [
+    "thetatv",
+    "theta_network"
+  ],
+  "FTT": [
+    "ftx_official",
+    "coinbene"
+  ],
+  "AE": [
+    "shapeshift_io",
+    "aeternity"
+  ],
+  "STPT": [
+    "stp_networks",
+    "mhcgbic"
+  ],
+  "LUNA": [
+    "themooncarl",
+    "terra_money"
+  ],
+  "RSR": [
+    "reserveprotocol",
+    "nnevvinn"
+  ],
+  "ZIL": [
+    "zilliqa",
+    "domzilliqa"
+  ],
+  "OXT": [
+    "stoolpresidente",
+    "gemini"
+  ],
+  "ARK": "arkecosystem",
+  "WAVES": [
+    "wavesprotocol",
+    "sasha35625"
+  ],
+  "AMB": [
+    "ambrosusamb",
+    "angelversetti"
+  ],
+  "ZRX": [
+    "0xproject",
+    "willwarren89"
+  ],
+  "PIVX": [
+    "_pivx",
+    "pivx_community"
+  ],
+  "BEAM": [
+    "beamprivacy",
+    "cruxpool"
+  ],
+  "HSR": [
+    "bithumbofficial",
+    "hcashofficial"
+  ],
+  "DIA": [
+    "cryptocom",
+    "defenseintel"
+  ],
+  "LEND": [
+    "aaveaave",
+    "stanikulechov"
+  ],
+  "REQ": [
+    "requestnetwork",
+    "lassuytchristop"
+  ],
+  "SC": [
+    "siatechhq",
+    "mysiacoin"
+  ],
+  "BAT": [
+    "attentiontoken",
+    "bat_community"
+  ],
+  "SUSHI": [
+    "aelfblockchain",
+    "cnn_blockchain"
+  ],
+  "EOS": [
+    "eos",
+    "block_one_"
+  ],
+  "AVA": [
+    "travalacom",
+    "avalancheavax"
+  ],
+  "OCEAN": [
+    "oceanprotocol",
+    "oceanexofficial"
+  ],
+  "PAX": [
+    "spectrocoin",
+    "paxosglobal"
+  ],
+  "SKY": [
+    "skycoinproject",
+    "coinhours"
+  ],
+  "XRPUP": [
+    "ripple_xrp1",
+    "xrpyoda"
+  ],
+  "COMP": [
+    "compoundfinance",
+    "compoundcoin"
+  ],
+  "REP": [
+    "augurproject",
+    "fedlioexchange"
+  ],
+  "CREAM": [
+    "boxmining",
+    "andrecronjetech"
+  ],
+  "GAS": [
+    "neo_blockchain",
+    "omgnetworkhq"
+  ],
+  "INS": [
+    "insolario",
+    "insolarxns"
+  ],
+  "TOMO": [
+    "tomochainann",
+    "longvuong22"
+  ],
+  "SNM": [
+    "sonmdevelopment",
+    "iolebedev"
+  ],
+  "BTCDOWN": [
+    "cryptocom",
+    "woonomic"
+  ],
+  "XVG": [
+    "vergecurrency",
+    "justinvendetta"
+  ],
+  "TRIG": [
+    "blocksafe",
+    "trigassociation"
+  ],
+  "DAI": [
+    "makerdao",
+    "daiglobal"
+  ],
+  "BAKE": [
+    "omgnetworkhq",
+    "raiden_network"
+  ],
+  "ADX": [
+    "adex_network"
+  ],
+  "PHX": [
+    "red_pulse_china"
+  ],
+  "XZC": [
+    "zcoinofficial",
+    "zreubenz"
+  ],
+  "ANKR": "ankr",
+  "GXS": [
+    "gxchainglobal",
+    "huang_mq"
+  ],
+  "LINKUP": [
+    "linkup_ug",
+    "linkupindia"
+  ],
+  "USDSB": [
+    "cryptocom",
+    "ugdsb"
+  ],
+  "TUSDB": [
+    "cryptocom",
+    "the_free_coin"
+  ],
+  "ERD": [
+    "elrondnetwork",
+    "beniaminmincu"
+  ],
+  "DGB": [
+    "digibytecoin",
+    "jaredctate"
+  ],
+  "LSK": [
+    "liskhq",
+    "maxkordek"
+  ],
+  "POE": [
+    "_poetproject"
+  ],
+  "GRS": [
+    "groestlcointeam",
+    "groestlcointeam/media"
+  ],
+  "EUR": [
+    "euerasmusplus",
+    "folgory1"
+  ],
+  "MATIC": [
+    "maticnetwork",
+    "sandeepnailwal"
+  ],
+  "SUB": "substratumnet",
+  "GVT": [
+    "genesis_vision"
+  ],
+  "KMD": [
+    "komodoplatform",
+    "chainzillaio"
+  ],
+  "AST": [
+    "airswap"
+  ],
+  "WABI": [
+    "wabitoken"
+  ],
+  "CDT": [
+    "bitladon",
+    "coindashio"
+  ],
+  "ARDR": [
+    "nxtcommunity",
+    "ardorplatform"
+  ],
+  "AION": [
+    "aion_oan",
+    "aion"
+  ],
+  "BCHABC": [
+    "get_delta",
+    "bitcoin_abc"
+  ],
+  "DUSK": [
+    "cryptodiffer",
+    "bittrexglobal"
+  ],
+  "XTZ": [
+    "tezos",
+    "tezosfoundation"
+  ],
+  "AUD": "aussie_digital",
+  "SYS": [
+    "syscoin",
+    "blockchaindan"
+  ],
+  "VIBE": [
+    "vibehubvr",
+    "vibehub"
+  ],
+  "BULL": [
+    "cryptobull",
+    "woonomic"
+  ],
+  "VTHO": [
+    "vechainofficial",
+    "vechainthorcom"
+  ],
+  "LRC": [
+    "loopringorg",
+    "daniel_loopring"
+  ],
+  "BGBP": [
+    "coindealcom",
+    "cryptopay"
+  ],
+  "BAL": [
+    "curvefinance",
+    "telcoin_team"
+  ],
+  "NEO": [
+    "neo_blockchain",
+    "neonewstoday"
+  ],
+  "UMA": [
+    "cotinetwork",
+    "umaprotocol"
+  ],
+  "BTG": [
+    "bitcoingold",
+    "pool_gold"
+  ],
+  "FIO": [
+    "joinfio",
+    "guardawallet"
+  ],
+  "LTCUP": [
+    "vergecurrency",
+    "cryptocom"
+  ],
+  "XLM": [
+    "jedmccaleb",
+    "gold_stellar"
+  ],
+  "PHB": [
+    "lomahcrypto",
+    "red_pulse_china"
+  ],
+  "LTCDOWN": [
+    "litecoin",
+    "vergecurrency"
+  ],
+  "STORJ": [
+    "siatechhq",
+    "storjproject"
+  ],
+  "TNB": "timenewbank",
+  "NEBL": [
+    "neblioteam",
+    "nebliof"
+  ],
+  "BLZ": [
+    "bluzellehq"
+  ],
+  "MOD": [
+    "modum_io"
+  ],
+  "VIA": [
+    "viacoin",
+    "viacoinman"
+  ],
+  "TUSD": [
+    "zebpay",
+    "spectrocoin"
+  ],
+  "REN": [
+    "jamestodaromd",
+    "renprotocol"
+  ],
+  "BNBBULL": [
+    "binance"
+  ],
+  "OST": [
+    "ostdotcom",
+    "betashop"
+  ],
+  "SOL": "mathwallet",
+  "WNXM": [
+    "okex",
+    "defi_just"
+  ],
+  "BCH": [
+    "rogerkver",
+    "bitcoincom"
+  ],
+  "ENJ": [
+    "enjin",
+    "swissborg"
+  ],
+  "POLY": [
+    "polymathnetwork",
+    "polybiuseu"
+  ],
+  "CTXC": [
+    "bittrexglobal",
+    "ctxcblockchain"
+  ],
+  "COS": [
+    "contentosio"
+  ],
+  "BTCUP": [
+    "bitcoin",
+    "cryptocom"
+  ],
+  "PNT": [
+    "nataleferrara",
+    "penta_gf"
+  ],
+  "MITH": [
+    "mithrilofficial",
+    "mithrilore"
+  ],
+  "USDS": [
+    "circlepay",
+    "usdcoinprinter"
+  ],
+  "BTC": [
+    "bitcoin",
+    "cryptocom"
+  ],
+  "ICN": [
+    "iconomicom",
+    "icnhodler"
+  ],
+  "BEL": [
+    "dapp_com",
+    "arpaofficial"
+  ],
+  "TRB": [
+    "okex",
+    "nasemtrb"
+  ],
+  "MCO": [
+    "cryptocom",
+    "kris_hk"
+  ],
+  "USDC": [
+    "circlepay",
+    "usdcoinprinter"
+  ],
+  "POWR": [
+    "powerledger_io",
+    "msjemmagreen"
+  ],
+  "DASH": [
+    "dashpay",
+    "nicholas_merten"
+  ],
+  "HBAR": [
+    "tokenmetricsinc",
+    "hbarprice"
+  ],
+  "BZRX": [
+    "loopringorg",
+    "idexio"
+  ],
+  "ICX": [
+    "helloiconworld",
+    "minhokim"
+  ],
+  "IRIS": [
+    "cryptocom",
+    "iris_epo"
+  ],
+  "BCC": [
+    "bccponzi",
+    "bastionexchange"
+  ],
+  "MFT": [
+    "mainframe_hq",
+    "mickhagen"
+  ],
+  "XTZUP": [
+    "cryptocom",
+    "troytrade"
+  ],
+  "YFII": [
+    "cointrendz",
+    "dfimoney"
+  ],
+  "HNT": [
+    "ftx_official",
+    "ico_analytics"
+  ],
+  "KAVA": [
+    "kava_labs",
+    "thekavacoin"
+  ],
+  "EVX": [
+    "everexio",
+    "alexieverex"
+  ],
+  "TRXUP": [
+    "cryptocom",
+    "the_free_coin"
+  ],
+  "ADAUP": [
+    "cryptocom",
+    "uzmancoin"
+  ],
+  "NKN": [
+    "nkn_org"
+  ],
+  "OGN": [
+    "cryptocom",
+    "originprotocol"
+  ],
+  "BQX": [
+    "ethos_io",
+    "investvoyager"
+  ],
+  "BTT": [
+    "justinsuntron",
+    "bittorrent"
+  ],
+  "CHR": [
+    "cryptocom",
+    "chromia"
+  ],
+  "DOTDOWN": [
+    "cryptocom",
+    "chevdor"
+  ],
+  "GO": [
+    "gocoin",
+    "go_chain"
+  ],
+  "BRD": [
+    "brdhq",
+    "breadtoken"
+  ],
+  "GNT": [
+    "golemproject"
+  ],
+  "SRM": [
+    "solana",
+    "swipewallet"
+  ],
+  "ADA": [
+    "cardanostiftung",
+    "cardano"
+  ],
+  "WPR": [
+    "wepowern"
+  ],
+  "ARPA": [
+    "arpaofficial",
+    "arpa_official"
+  ],
+  "ONG": [
+    "onename_global",
+    "someeofficial"
+  ],
+  "QKC": [
+    "quark_chain"
+  ],
+  "OAX": "oax_foundation",
+  "BTCB": [
+    "cryptocom",
+    "creamdotfinance"
+  ],
+  "OMG": [
+    "omgnetworkhq",
+    "omg_pool"
+  ],
+  "STMX": [
+    "wazirxindia",
+    "storm_token"
+  ],
+  "IQ": [
+    "block_one_",
+    "everipedia"
+  ],
+  "EOSUP": [
+    "block_one_",
+    "bytemaster7"
+  ],
+  "NANO": [
+    "nano",
+    "colinlemahieu"
+  ],
+  "VEN": [
+    "vechainofficial",
+    "reserveprotocol"
+  ],
+  "RDN": [
+    "aelfblockchain",
+    "cartesiproject"
+  ],
+  "ADADOWN": [
+    "cryptocom",
+    "atomicwallet"
+  ],
+  "SUN": [
+    "justinsuntron",
+    "tronfoundation"
+  ],
+  "KSM": [
+    "cryptocom",
+    "gavofyork"
+  ],
+  "BNBBEAR": [
+    "cryptocom",
+    "binance"
+  ],
+  "WTC": [
+    "waltonchain",
+    "waltonchainuk"
+  ],
+  "IOST": [
+    "iost_official",
+    "jimmyzhong_iost"
+  ],
+  "ATOM": [
+    "atomicwallet",
+    "cosmos"
+  ],
+  "HIVE": [
+    "markethive",
+    "hiveterminal"
+  ],
+  "FUEL": [
+    "vanbexgroup",
+    "etherparty_com"
+  ],
+  "CLOAK": [
+    "cloakcoin",
+    "cloakcoin_promo"
+  ],
+  "GBP": [
+    "coindealcom",
+    "cryptopay"
+  ],
+  "TRXDOWN": [
+    "tronfoundation",
+    "cryptocom"
+  ],
+  "IOTA": [
+    "iotatoken",
+    "domschiener"
+  ],
+  "ETHDOWN": [
+    "cryptowhitewalk"
+  ],
+  "SXP": [
+    "swipewallet",
+    "jlswipe"
+  ],
+  "ALGO": [
+    "cryptocom",
+    "cryptogainz1"
+  ],
+  "YFI": [
+    "andrecronjetech",
+    "iearnfinance"
+  ],
+  "TROY": [
+    "troytrade",
+    "troyretzer"
+  ],
+  "ELF": [
+    "aelfblockchain"
+  ],
+  "USDT": [
+    "omgnetworkhq",
+    "blockstream"
+  ],
+  "LTC": [
+    "satoshilite",
+    "litecoin"
+  ],
+  "MBL": [
+    "ontologynetwork",
+    "moviebloc"
+  ],
+  "JST": [
+    "justinsuntron",
+    "tronfoundation"
+  ],
+  "ETC": [
+    "eth_classic",
+    "ethereumclassic"
+  ],
+  "IOTX": [
+    "iotex_io",
+    "raullen"
+  ],
+  "NBS": [
+    "nbstv",
+    "airdrops_io"
+  ],
+  "DOGE": [
+    "dogecoin",
+    "dogecoin_devs"
+  ],
+  "NAS": [
+    "nebulasio"
+  ],
+  "WIN": [
+    "cryptocom",
+    "cartesiproject"
+  ],
+  "XTZDOWN": [
+    "troytrade"
+  ],
+  "MANA": [
+    "decentraland",
+    "ethermon_io"
+  ],
+  "BTS": [
+    "bitshares",
+    "_bitshares"
+  ],
+  "SNGLS": [
+    "singulardtv",
+    "snglsdao"
+  ],
+  "VITE": [
+    "vitelabs",
+    "vitexexchange"
+  ],
+  "DREP": [
+    "foundationdrep/media",
+    "foundationdrep"
+  ],
+  "CELR": [
+    "selcoin",
+    "celernetwork"
+  ],
+  "MKR": [
+    "makerdao",
+    "nanexcool"
+  ],
+  "IDEX": [
+    "idexio",
+    "coinswitch"
+  ],
+  "EGLD": [
+    "elrondnetwork",
+    "beniaminmincu"
+  ],
+  "BCHSV": [
+    "coinmarketcap",
+    "get_delta"
+  ],
+  "SNT": [
+    "bithumbofficial",
+    "ethstatus"
+  ],
+  "CND": [
+    "cindicator",
+    "bittrexglobal"
+  ],
+  "DOCK": [
+    "docknetwork",
+    "dock_io"
+  ],
+  "WINGS": [
+    "ontologynetwork",
+    "fin_nexus"
+  ],
+  "STEEM": [
+    "steemit",
+    "steemnetwork"
+  ],
+  "RPX": [
+    "red_pulse_china"
+  ],
+  "XRPBEAR": [
+    "xrpyoda",
+    "the_free_coin"
+  ],
+  "BKRW": [
+    "swipewallet"
+  ],
+  "ETHUP": [
+    "pundixlabs",
+    "sbf_alameda"
+  ],
+  "UNI": [
+    "augurproject",
+    "spheroid_io"
+  ],
+  "PERL": [
+    "perlinnetwork",
+    "dorjeesun"
+  ],
+  "RUNE": [
+    "runekek",
+    "mrruneevensen"
+  ],
+  "LUN": "lunyrinc",
+  "YOYO": [
+    "vergecurrency",
+    "xrpyoda"
+  ],
+  "ZEN": [
+    "horizenglobal",
+    "heytaizen"
+  ],
+  "VET": [
+    "vechainofficial",
+    "sunshinelu24"
+  ],
+  "STX": [
+    "stx_coin"
+  ],
+  "PAXG": [
+    "cryptocom",
+    "zebpay"
+  ],
+  "ETHBULL": [
+    "spencernoon",
+    "lukacacic"
+  ],
+  "SWRV": [
+    "ankr",
+    "thedaomaker"
+  ],
+  "FET": "fetch_ai",
+  "LINK": [
+    "chainlink",
+    "chainlinkgod"
+  ],
+  "ARN": [
+    "aeron_aero"
+  ],
+  "BEAR": [
+    "chicagobears",
+    "_bullandbear"
+  ],
+  "BCPT": [
+    "blockmasonio"
+  ],
+  "QSP": "quantstamp",
+  "RLC": [
+    "iex_ec",
+    "hehaiwu"
+  ],
+  "PPT": [
+    "bitpopulous",
+    "iamstevenico"
+  ],
+  "APPC": [
+    "appcoinsproject"
+  ],
+  "NMR": [
+    "numerai",
+    "numerairehodler"
+  ],
+  "ETH": [
+    "vitalikbuterin",
+    "ethereum"
+  ],
+  "FTM": [
+    "fantomfdn",
+    "cryptomhchn"
+  ],
+  "TFUEL": [
+    "theta_network",
+    "fuelcoin"
+  ],
+  "CMT": [
+    "cybermiles"
+  ],
+  "NULS": [
+    "ontologynetwork",
+    "nuls"
+  ],
+  "KNC": [
+    "kybernetwork",
+    "kyberswap"
+  ],
+  "FUN": [
+    "funfairtech",
+    "aerobatic"
+  ],
+  "LOOM": [
+    "loomdart",
+    "loomnetwork"
+  ],
+  "CVC": [
+    "vinnylingham",
+    "civickey"
+  ],
+  "XEM": [
+    "nemofficial",
+    "nem_hub"
+  ],
+  "DATA": [
+    "streamr",
+    "streamrinc"
+  ],
+  "COTI": [
+    "tehmoonwalker",
+    "cotinetwork"
+  ],
+  "SAND": [
+    "thesandboxgame",
+    "medical_chain"
+  ],
+  "EOSBULL": [
+    "cointrendz",
+    "macdbedstuy"
+  ],
+  "XRPDOWN": [
+    "ripple",
+    "vergecurrency"
+  ],
+  "COCOS": [
+    "cocosbcx",
+    "cocos2dx"
+  ],
+  "TRX": [
+    "justinsuntron",
+    "tronfoundation"
+  ],
+  "BURGER": [
+    "100trillionusd",
+    "nano"
+  ],
+  "DNT": "district0x",
+  "NXS": [
+    "nexusofficial",
+    "colinjcantrell"
+  ],
+  "HOT": [
+    "protocol_hydro",
+    "itsa_global"
+  ],
+  "CRV": [
+    "cryptomichnl",
+    "curvefinance"
+  ],
+  "XRPBULL": [
+    "thebearablebull",
+    "cryptobull2020"
+  ],
+  "VIB": [
+    "viberate",
+    "livecoin_net"
+  ],
+  "CTSI": [
+    "cartesiproject",
+    "bilaxy_exchange"
+  ],
+  "MDT": [
+    "measurabledata",
+    "midmagic"
+  ],
+  "WAN": [
+    "wanchain_org",
+    "jacklu_wan"
+  ],
+  "NCASH": [
+    "nucleusvision"
+  ],
+  "XRP": [
+    "ripple",
+    "ripple_xrp1"
+  ],
+  "WRX": [
+    "nischalshetty",
+    "wazirxindia"
+  ],
+  "ENG": [
+    "cloakcoin",
+    "guyzys"
+  ],
+  "AVAX": [
+    "el33th4xor",
+    "ico_analytics"
+  ],
+  "ONE": [
+    "onecoincrypto",
+    "sperax_io"
+  ],
+  "BUSD": [
+    "zilliqa",
+    "elrondnetwork"
+  ],
+  "DOT": [
+    "polkadot",
+    "cryptosbatman"
+  ],
+  "ETHBEAR": "binance",
+  "DENT": [
+    "dentcoin",
+    "dentwireless"
+  ],
+  "WING": [
+    "ontologynetwork",
+    "coinmamba"
+  ],
+  "TCT": [
+    "tokenclub_tct",
+    "tokenclub"
+  ],
+  "EOSBEAR": [
+    "the_free_coin"
+  ],
+  "SNX": [
+    "synthetix_io",
+    "kaiynne"
+  ],
+  "MTL": [
+    "erikfinman",
+    "metalpaysme"
+  ],
+  "EOSDOWN": [
+    "vergecurrency",
+    "cryptocom"
+  ]
+}
