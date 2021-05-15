@@ -17,7 +17,7 @@ def lambda_handler(event: dict,
     """
     event_type = event["type"]
     assert event_type in MediaEnum.__members__, f"Event was {event}"
-    if MediaEnum.plot_image_update == MediaEnum(event_type):
+    if MediaEnum.plotly_image_update == MediaEnum(event_type):
         PyplotGraph.publish_image_overall(event["all_coin_history"],
                                           event["eth_full_history"])
     elif MediaEnum.blog_main_page == MediaEnum(event_type):
