@@ -244,7 +244,7 @@ class BlogWebPage(WebPage):
         for coin_dict, new_row in zip(list_of_coin_dicts, new_rows):
             joined_string += f"{coin_dict['COIN']}|{coin_dict['QUANTITY']}|" \
                 f"{coin_dict['SELL_TARGET']:12.8f}|" \
-                f"{float(coin_dict['QUANTITY']) * new_row['COIN_ETH_QUANTITY']:.2f}|" \
+                f"{float(coin_dict['QUANTITY']) * new_row['COIN_ETH_VALUE']:.2f}|" \
                 f"{datetime.datetime.fromtimestamp(coin_dict['SELL_BY']/1000).strftime('%d %b %Y')}|\n"
         logger.info("Generated the table for printing")
         return joined_string

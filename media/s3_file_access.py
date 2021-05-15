@@ -29,6 +29,8 @@ class S3FileAccessAbstract:
 
     def list_files(self, prefix_add=None):
         all_objects = boto3.client('s3').list_objects(Bucket=self.bucket, Prefix=f"{self.file_name}{prefix_add}")
+        if "Contents" not in all_objects:
+            return []
         return all_objects['Contents']
 
 
