@@ -1,4 +1,3 @@
-import os
 from enum import Enum
 from typing import List, Dict
 
@@ -20,3 +19,13 @@ def get_parameter_from_ssm(key):
     client = boto3.client("ssm")
     return client.get_parameter(Name=key)['Parameter']['Value']
 
+def alternate_sort_by_key(list_of_dicts,
+                          key="TOTAL_ETH_EQUIVALENT"):
+    sorted_items = sorted(list_of_dicts, key=lambda x: x[key])
+    alternating_rows = []
+    while len(sorted_items) > 0:
+        alternating_rows.append(sorted_items.pop())
+
+        if len(sorted_items)>0:
+            alternating_rows.append(sorted_items.pop(0))
+    return alternating_rows

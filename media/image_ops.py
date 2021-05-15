@@ -13,7 +13,7 @@ from matplotlib import pyplot as plt
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 
 from media.utils.postpro import PredictionOperations
-from media.utils.general import get_parameter_from_ssm
+from media.utils.general import get_parameter_from_ssm, alternate_sort_by_key
 
 logger = logging.getLogger(__name__)
 
