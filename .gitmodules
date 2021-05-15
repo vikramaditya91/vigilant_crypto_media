@@ -1,0 +1,3 @@
+[submodule "submodules/cryptocurrency-icons"]
+	path = submodules/cryptocurrency-icons
+	url = git@github.com:spothq/cryptocurrency-icons.git

@@ -54,7 +54,7 @@ class CryptoCoinImage:
         self.image_root = pathlib.Path(
             pathlib.Path(__file__).parents[3],
             "submodules",
-            "icons"
+            "cryptocurrency-icons"
         )
 
     def get_icon_image_of(self,
