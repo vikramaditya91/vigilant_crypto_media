@@ -2,6 +2,7 @@ import datetime
 import functools
 import logging
 import operator
+import boto3
 import pathlib
 from typing import List, Dict, Tuple
 
@@ -13,8 +14,8 @@ from matplotlib import dates as mdates
 from matplotlib import pyplot as plt
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 
-from project_core.vigilant_crypto.coin.post_processing_operations import PredictionOperations
-from project_core.vigilant_crypto.utils.general_utils import get_keys_from_ini, alternate_sort_by_key
+from media.utils.postpro import PredictionOperations
+from media.utils.general import get_parameter_from_ssm
 
 logger = logging.getLogger(__name__)
 
@@ -267,9 +268,10 @@ class PyplotGraph(GeneralGraph):
     """Pyplot graph for the blog"""
     def __init__(self):
         self.fig = go.Figure()
-        plotly_log_cred = get_keys_from_ini("chart_studio")
-        chart_studio.tools.set_credentials_file(username=plotly_log_cred["username"],
-                                                api_key=plotly_log_cred["api_key"])
+        username = get_parameter_from_ssm('PLOTLY_USERNAME')
+        api_key = get_parameter_from_ssm('PLOTLY_API_KEY')
+        chart_studio.tools.set_credentials_file(username=username,
+                                                api_key=api_key)
         logger.info("Generated the plotly object and logged in with the credentials")
 
     def format_xlabel(self):
@@ -342,3 +344,6 @@ class PyplotGraph(GeneralGraph):
         figure = plotly_graph_handle.generate_graph(entire_coin_history_vs_timestamp,
                                                     eth_vs_timestamp_history_full)
         plotly_graph_handle.upload_image_to_server(figure, filename="blog_10eth_challenge_history")
+
+
+

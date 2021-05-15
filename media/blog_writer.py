@@ -1,12 +1,9 @@
-import pathlib
 import datetime
 import logging
 from jinja2 import Template
-from project_core.vigilant_crypto.exchange.binance_low_level import BinanceSync
-from project_core.vigilant_crypto.coin.post_processing_operations import PredictionOperations
 from abc import ABC, abstractmethod
-from project_core.vigilant_crypto.utils import git_operations
-
+from media.s3_file_access import S3FileAccessAbstract
+from media.utils.postpro import PredictionOperations
 logger = logging.getLogger(__name__)
 
 
@@ -36,13 +33,12 @@ def add_to_factory(identifier):
 
 class WebPage(ABC):
     def __init__(self):
-        self.repo_path = pathlib.Path(__file__).parents[5] / "general" / "vikramaditya91.github.io"
-        self.general_url = "https://vikramaditya91.github.io/"
         self.simulation_start_date = datetime.datetime(2020, 2, 2)
-        self.template_file = ""
+        self.relative_template = ""
+        self.file_exists = None
 
     @abstractmethod
-    def get_destination_path(self):
+    def get_destination_relative_path(self):
         pass
 
     @abstractmethod
@@ -59,27 +55,29 @@ class WebPage(ABC):
         dict_to_replace_crypto_update = self.prepare_dict(*args, **kwargs)
         page_path = self.publish_file(
             dict_to_replace_crypto_update)
-        gitops = git_operations.GitOps()
-        gitops.files_to_commit.add(page_path)
-        return self.get_posted_url(page_path)
+        return page_path
 
     @staticmethod
-    def get_template_file_content(file_path):
+    def get_template_file_content(relative_template):
         """Returns the content of the template file"""
-        with open(file_path, "r") as main_template_file:
-            template_handle = Template(main_template_file.read())
-        logger.info(f"Obtained the template from {file_path}")
+        with S3FileAccessAbstract(file_name=relative_template) as main_template_file:
+            with open(main_template_file, 'r') as fp:
+                template_handle = Template(fp.read())
+        logger.info(f"Obtained the template from {relative_template}")
         return template_handle
 
     def publish_file(self, dict_to_replace):
         """Update the markdown file the template by replacing the contents in {{ }}"""
-        template = self.get_template_file_content(self.template_file)
+        template = self.get_template_file_content(self.relative_template)
         rendered_file_content = template.render(dict_to_replace)
-        destination_file = self.get_destination_path()
+        destination_file = self.get_destination_relative_path()
         logger.info(f"rendered file content is available by replacing the dict {dict_to_replace}\n"
                     f"on the file: {destination_file}")
-        with open(destination_file, "w") as fp:
-            fp.write(rendered_file_content)
+        with S3FileAccessAbstract(file_name=destination_file,
+                                  push_back=True,
+                                  file_exists=self.file_exists) as templated:
+            with open(templated, "w") as fp:
+                fp.write(rendered_file_content)
         return destination_file
 
     @staticmethod
@@ -113,16 +111,16 @@ class MainWebPage(WebPage):
     """Responsible for updating the crypto_update.md"""
     def __init__(self):
         super().__init__()
-        self.template_file = self.repo_path / "_layouts" / "template-eth-challenge-main.md"
+        self.relative_template = "_layouts/template-eth-challenge-main.md"
+        self.file_exists = True
 
     def get_posted_url(self, destination_path):
         """Get the final url where it is going to be posted"""
         return self.general_url + "crypto_update"
 
-    @decorate_file_exists
-    def get_destination_path(self):
+    def get_destination_relative_path(self):
         """Gets the destination path of the file after processing"""
-        return self.repo_path / "crypto_update.md"
+        return "crypto_update.md"
 
     def prepare_dict(self, eth_vs_ts_history_full):
         """Prepare the dict specific to the crypto_update.md template"""
@@ -145,19 +143,24 @@ class BlogWebPage(WebPage):
     def __init__(self):
         super().__init__()
         self.base_name_for_blog = "10-eth-challenge"
-        self.template_file = self.repo_path / "_layouts" / "template-eth-challenge-blog.md"
+        self.relative_template = "_layouts/template-eth-challenge-blog.md"
+        self.file_exists = False
 
-    def get_destination_path(self):
+    def get_destination_relative_path(self):
         """Produces the destination of the renderer taking into account account if a
         blog already was written that date
         :return pathlib.Path object to the destination file
         """
         now = datetime.datetime.now()
         date_string = f"{now.year}-{now.month}-{now.day}"
-        blog_post_dir = self.repo_path / "_posts" / "crypto"
-        same_date_file_list = [item for item in blog_post_dir.iterdir() if date_string in item.name]
+        blog_post_dir = "_posts/crypto"
+        files_in_dir = S3FileAccessAbstract(file_name=blog_post_dir).list_files(
+            prefix_add=f"/{now.year}-{now.month}-{now.day}"
+        )
+        file_names_in_dir = [f['Key'] for f in files_in_dir]
+        same_date_file_list = [item for item in file_names_in_dir if date_string in item]
         suffix = "" if len(same_date_file_list) == 0 else len(same_date_file_list)
-        return blog_post_dir / f"{date_string}-{self.base_name_for_blog}{suffix}.md"
+        return f"{blog_post_dir}/{date_string}-{self.base_name_for_blog}{suffix}.md"
 
     def get_posted_url(self, destination_path):
         """Get the final url where it is going to be posted"""
@@ -173,13 +176,15 @@ class BlogWebPage(WebPage):
         """Produces the string which does the replacing. Returns empty string if nothing to replace"""
         replaced_string = ""
         for orig_dict, new_dict in replaced_rows:
+            price_of_sold_coin = new_dict['QUANTITY'] * new_dict['COIN_ETH_VALUE'] / orig_dict['QUANTITY']
+
             replaced_string += f"Sold: {orig_dict['COIN']}, quantity: {orig_dict['QUANTITY']:12.2f}, " \
-                             f"price: {BinanceSync(compare_against='ETH').get_live_price(orig_dict['COIN']):12.8f}<br>" \
+                             f"price: {price_of_sold_coin:12.8f}<br>" \
                              f"Bought: {new_dict['COIN']}, quantity: {new_dict['QUANTITY']:12.2f}, " \
                              f"price: {new_dict['COIN_ETH_VALUE']:12.8f}<br>"
         return replaced_string
 
-    def prepare_dict(self, list_of_coin_dicts, replaced_rows, eth_vs_time_history_full):
+    def prepare_dict(self, list_of_coin_dicts, replaced_rows, eth_vs_time_history_full, new_rows):
         """
         Creates the dict used by the jinja2 renderer to replace text
         :param list_of_coin_dicts: list of coin dicts which contain information to be printed
@@ -189,7 +194,7 @@ class BlogWebPage(WebPage):
         """
         dict_to_return = self.prepare_general_dict(eth_vs_time_history_full)
         dict_to_return.update(
-            {"table_content": self.table_format_vertical_current_holding(list_of_coin_dicts),
+            {"table_content": self.table_format_vertical_current_holding(list_of_coin_dicts, new_rows),
              "title_date": datetime.datetime.now().strftime('%d %b %Y'),
              "detailed_date_time": datetime.datetime.now().astimezone().strftime("%m/%d/%Y, %H:%M:%S %Z"),
              "changes_in_coins_held": self.get_replaced_coins_string(replaced_rows),
@@ -218,7 +223,7 @@ class BlogWebPage(WebPage):
         return joined_string
 
     @staticmethod
-    def table_format_vertical_current_holding(list_of_coin_dicts):
+    def table_format_vertical_current_holding(list_of_coin_dicts, new_rows):
         """Formats the table vertically as
         Current holdings from the ETH Challenge
         Coin ticker 	Quantity 	Sell target
@@ -236,10 +241,10 @@ class BlogWebPage(WebPage):
         """
         joined_string = "|Coin ticker|Quantity|Sell target<br>coin/ETH|Eqv ETH<br>value|Sell latest by|\n" \
                         "|-----------|--------|-----------|-----------|--------------|\n"
-        for coin_dict in list_of_coin_dicts:
+        for coin_dict, new_row in zip(list_of_coin_dicts, new_rows):
             joined_string += f"{coin_dict['COIN']}|{coin_dict['QUANTITY']}|" \
                 f"{coin_dict['SELL_TARGET']:12.8f}|" \
-                f"{float(coin_dict['QUANTITY']) * BinanceSync(compare_against='ETH').get_live_price(coin_dict['COIN']):.2f}|" \
+                f"{float(coin_dict['QUANTITY']) * new_row['COIN_ETH_QUANTITY']:.2f}|" \
                 f"{datetime.datetime.fromtimestamp(coin_dict['SELL_BY']/1000).strftime('%d %b %Y')}|\n"
         logger.info("Generated the table for printing")
         return joined_string
