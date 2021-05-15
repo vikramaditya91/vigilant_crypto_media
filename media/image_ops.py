@@ -2,13 +2,11 @@ import datetime
 import functools
 import logging
 import operator
-import boto3
 import pathlib
 from typing import List, Dict, Tuple
 
 import chart_studio
 import numpy as np
-import pandas as pd
 import plotly.graph_objects as go
 from matplotlib import dates as mdates
 from matplotlib import pyplot as plt
@@ -48,23 +46,6 @@ class GeneralGraph:
                                        f"{coin_dict['TOTAL_ETH_EQUIVALENT']:8.2f}<br>"
             required_info_table[timestamp] = coin_content_string
         return required_info_table
-
-    def convert_raw_data_to_df(self, dict_each_coin_timestamped, eth_vs_timestamp_history):
-        """
-        Prepare the df for plotting on plotly
-        :param dict_each_coin_timestamped: dict where key is the ts, value is the list of coins coin_dicts held in df
-        :param eth_vs_timestamp_history: Complete history of the ETH vs timestamp
-        :return: dataframe which contains the timestamp, total-eth-value, coin_names
-        """
-        df_full_eth_history = pd.DataFrame(eth_vs_timestamp_history, columns=['timestamp', 'total-eth-value'])
-        df_full_eth_history = df_full_eth_history.set_index("timestamp")
-        timestamp_vs_coin_quantity_dict = self.flatten_all_history_to_coin_name_quantity(dict_each_coin_timestamped)
-        label_df = pd.DataFrame.from_dict(timestamp_vs_coin_quantity_dict, orient="index")
-        label_df = label_df.rename(columns={0: "coin_names"})
-        df = pd.concat([df_full_eth_history, label_df], axis=1)
-        df = df.fillna("")
-        df = df.reset_index().rename(columns={"index": "timestamp"})
-        return df
 
 
 class CryptoCoinImage:
@@ -309,11 +290,10 @@ class PyplotGraph(GeneralGraph):
 
     def generate_graph(self, entire_history_dict, dict_each_coin_timestamped):
         # TODO Use datetime object. But plotly does not plot smooth graph
-        df = self.convert_raw_data_to_df(entire_history_dict, dict_each_coin_timestamped)
-        df['date'] = df["timestamp"].apply(lambda x: datetime.datetime.fromtimestamp(x/1000))
-        date_plot_list = df['date'].tolist()
-        eth_value_list = df['total-eth-value'].tolist()
-        coin_name_list = df['coin_names'].tolist()
+        date_plot_list = [datetime.datetime.fromtimestamp(x[0] / 1000) for x in dict_each_coin_timestamped]
+        eth_value_list = [x[1] for x in dict_each_coin_timestamped]
+        flattened_coin_history_dict = self.flatten_all_history_to_coin_name_quantity(entire_history_dict)
+        coin_name_list = [flattened_coin_history_dict.get(ts[0], "") for ts in dict_each_coin_timestamped]
         self.fig.add_trace(go.Scatter(
             x=date_plot_list,
             y=eth_value_list,
