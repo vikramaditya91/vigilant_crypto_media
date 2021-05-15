@@ -52,7 +52,7 @@ class CryptoCoinImage:
     """The images from the cryptocurrency sub-module are available here"""
     def __init__(self):
         self.image_root = pathlib.Path(
-            pathlib.Path(__file__).parents[3],
+            pathlib.Path(__file__).parents[2],
             "submodules",
             "cryptocurrency-icons"
         )
