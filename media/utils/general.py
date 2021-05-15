@@ -12,7 +12,7 @@ class MediaEnum(Enum):
 
 
 def get_total_holding_from_rows(rows: List[Dict]):
-    return sum([row['COIN_ETH_VALUE'] for row in rows])
+    return sum([row['COIN_ETH_VALUE'] * row['QUANTITY'] for row in rows])
 
 
 def get_parameter_from_ssm(key):
