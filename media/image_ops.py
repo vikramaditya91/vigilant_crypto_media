@@ -312,9 +312,12 @@ class PyplotGraph(GeneralGraph):
         return save_result
 
     @staticmethod
-    def upload_image_to_server(fig, filename):
+    def upload_image_to_server(fig,
+                               ):
         logger.info("Attempting to load the graph on the chart_studio")
-        chart_studio.plotly.plot(fig, filename=filename, auto_open=False)
+        chart_studio.plotly.plot(fig,
+                                 auto_open=False,
+                                 )
 
     @classmethod
     def publish_image_overall(cls,
@@ -323,7 +326,8 @@ class PyplotGraph(GeneralGraph):
         plotly_graph_handle = PyplotGraph()
         figure = plotly_graph_handle.generate_graph(entire_coin_history_vs_timestamp,
                                                     eth_vs_timestamp_history_full)
-        plotly_graph_handle.upload_image_to_server(figure, filename="blog_10eth_challenge_history")
+        plotly_graph_handle.upload_image_to_server(figure,
+                                                   )
 
 
 
